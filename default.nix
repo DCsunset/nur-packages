@@ -15,6 +15,5 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   task-json-cli = pkgs.callPackage ./pkgs/task-json-cli { };
-  # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
-  # ...
+  commit-and-tag-version = pkgs.callPackage ./pkgs/commit-and-tag-version { };
 }
