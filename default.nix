@@ -16,4 +16,7 @@
 
   task-json-cli = pkgs.callPackage ./pkgs/task-json-cli { };
   commit-and-tag-version = pkgs.callPackage ./pkgs/commit-and-tag-version { };
+  emacsPackages = pkgs.recurseIntoAttrs (
+    pkgs.callPackage ./pkgs/emacs-pkgs { }
+  );
 }

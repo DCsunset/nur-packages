@@ -1,0 +1,5 @@
+{ callPackage }:
+
+{
+  combobulate = callPackage ./combobulate { };
+}
