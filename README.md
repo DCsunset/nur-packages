@@ -14,20 +14,21 @@ add the following to your `flake.nix` config:
 
 ```nix
 {
-	inputs = {
-		nur-dcsunset = {
-			url = "github:DCsunset/nur-packages";
-		};
-	};
+  inputs = {
+    nur-dcsunset = {
+      url = "github:DCsunset/nur-packages";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
-	outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         # Add packages from this repo
-				{
-					nixpkgs.overlays = [ inputs.nur-dcsunset.overlays.pkg ];
-				}
+        {
+          nixpkgs.overlays = [ inputs.nur-dcsunset.overlays.pkg ];
+        }
 
         # Binary cache (optional)
         ({ ... }: {
