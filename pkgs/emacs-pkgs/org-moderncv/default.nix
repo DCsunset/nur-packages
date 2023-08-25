@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, emacsWithPackages }:
+{ lib, stdenv, fetchFromGitHub, emacsWithPackages }:
 
 stdenv.mkDerivation rec {
   name = "org-moderncv";
@@ -23,4 +23,10 @@ stdenv.mkDerivation rec {
     install -d $LISPDIR
     install *.el *.elc $LISPDIR
   '';
+
+  meta = with lib; {
+    description = "Org exporter for curriculum vitae or cover letter using moderncv";
+    homepage = "https://github.com/DCsunset/org-moderncv";
+    license = licenses.gpl3;
+  };
 }
