@@ -15,6 +15,7 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   task-json-cli = pkgs.callPackage ./pkgs/task-json-cli { };
+  batch-cmd = pkgs.callPackage ./pkgs/batch-cmd { };
   commit-and-tag-version = pkgs.callPackage ./pkgs/commit-and-tag-version { };
   emacsPackages = pkgs.recurseIntoAttrs (
     pkgs.callPackage ./pkgs/emacs-pkgs { }
