@@ -4,7 +4,7 @@ with lib;
 
 let
 
-  cfg = config.services.hoogle;
+  cfg = config.services.hoogle-server;
 
   hoogleEnv = pkgs.buildEnv {
     name = "hoogle";
@@ -13,7 +13,7 @@ let
 
 in {
 
-  options.services.hoogle = {
+  options.services.hoogle-server = {
     enable = mkEnableOption (lib.mdDoc "Haskell documentation server");
 
     port = mkOption {
