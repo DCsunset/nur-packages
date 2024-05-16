@@ -30,7 +30,6 @@ stdenv.mkDerivation rec {
     changelog = "https://github.com/swillner/highlight-pointer/releases/tag/v${version}";
     license = licenses.mit;
     platforms = platforms.linux;
-    maintainers = with maintainers; [ DCsunset ];
     mainProgram = "highlight-pointer";
   };
 }
