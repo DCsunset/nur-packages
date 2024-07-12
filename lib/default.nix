@@ -3,7 +3,7 @@
 (import ./network.nix { inherit lib; }) //
 (
   with lib;
-  {
+  rec {
     # fitler file names with predicate in dir
     filterDir = pred: dir:
       builtins.attrNames (
