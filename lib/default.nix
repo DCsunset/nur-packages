@@ -1,6 +1,6 @@
 { lib }:
 
-(import ./network { inherit lib; }) //
+(import ./network.nix { inherit lib; }) //
 (
   with lib;
   {
