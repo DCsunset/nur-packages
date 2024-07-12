@@ -9,7 +9,7 @@
 { pkgs ? import <nixpkgs> { } }:
 
 let
-  dc-lib = import ./lib { inherit pkgs; }; # functions
+  dc-lib = import ./lib { inherit (pkgs) lib; }; # functions
 in {
   # The `lib`, `modules`, and `overlay` names are special
   lib = dc-lib;
