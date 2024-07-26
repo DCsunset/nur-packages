@@ -28,7 +28,7 @@
       modules = builtins.listToAttrs (
         map (m: {
           name = m;
-          value = import ./modules + "/${m}";
+          value = import (./modules + "/${m}");
         }) (dc-lib.listSubdirNames ./modules)
       );
 
