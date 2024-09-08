@@ -3,7 +3,7 @@
 with lib;
 
 let
-  cfg = config.services.soju;
+  cfg = config.services.soju-server;
   stateDir = "/var/lib/soju";
   runtimeDir = "/run/soju";
   listen = cfg.listen
@@ -33,7 +33,7 @@ in
 {
   ###### interface
 
-  options.services.soju = {
+  options.services.soju-server = {
     enable = mkEnableOption "soju";
 
     package = mkPackageOption pkgs "soju" { };
