@@ -369,6 +369,7 @@ in
         ProtectKernelModules = true;
         ProtectKernelTunables = true;
         ProtectSystem = "full";
+        ReadWritePaths = [ cfg.stateDir ];
         RestrictAddressFamilies = "~AF_PACKET AF_NETLINK";
         RestrictNamespaces = true;
         RestrictSUIDSGID = true;
