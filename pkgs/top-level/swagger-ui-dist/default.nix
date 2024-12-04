@@ -10,10 +10,8 @@ stdenv.mkDerivation rec {
   };
 
   installPhase = ''
-    mkdir -p $out/share
-    cd $out/share
-    tar -xvf $src
-    mv package ${pname}
+    mkdir -p $out
+    tar -xvf $src --strip-components 1 -C $out
   '';
 
   meta = with lib; {
