@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   pname = "swagger-ui-dist";
-  version = "5.17.14";
+  version = "5.18.2";
 
   src = fetchurl {
     url = "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-${version}.tgz";
