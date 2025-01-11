@@ -76,7 +76,7 @@ rec {
   # Append a suffix to ipv4 subnet that ends with x.x.x.0/xx (len is kept)
   ipv4Append = subset: suffix: let
     ip = parseIp subset;
-  in "${ipv4Prefix ip.addr}${suffix}/${toString ip.len}";
+  in "${ipv4Prefix subnet}${suffix}/${toString ip.len}";
 
   # Append a suffix to ipv6 subnet that ends with ::/xx (len is kept)
   ipv6Append = subset: suffix: let
