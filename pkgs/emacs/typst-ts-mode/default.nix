@@ -14,9 +14,7 @@ stdenv.mkDerivation {
     (emacs.pkgs.withPackages (epkgs: []))
   ];
   buildPhase = ''
-    emacs -L . --batch -f batch-byte-compile *.el 2> stderr.txt
-    cat stderr.txt
-    # ! grep -q ': Warning:' stderr.txt
+    emacs -L . --batch -f batch-byte-compile *.el
   '';
   installPhase = ''
     LISPDIR=$out/share/emacs/site-lisp
