@@ -1,7 +1,7 @@
 { lib, stdenv, fetchgit, emacs }:
 
 stdenv.mkDerivation {
-  pname = "modaled";
+  pname = "typst-ts-mode";
   version = "0-unstable-2025-03-18";
 
   src = fetchgit {
