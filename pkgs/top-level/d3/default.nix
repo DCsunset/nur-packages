@@ -1,7 +1,7 @@
 { lib, stdenv, fetchurl }:
 
 stdenv.mkDerivation rec {
-  pname = "swagger-ui-dist";
+  pname = "d3";
   version = "7.9.0";
 
   src = fetchurl {
